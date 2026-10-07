@@ -1,0 +1,172 @@
+# ==============================================================================
+# LEUKEMIA ViT PROJECT .gitignore
+# Strictly protects datasets, training caches, secrets, and training-only artifacts.
+# ==============================================================================
+
+# --- Python & Environment Artifacts ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+
+# --- Jupyter / Notebook Caches ---
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# --- OS & Editor Files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# --- Secrets, Credentials & Local Configs ---
+.env
+.env.*
+*.env
+*credentials*
+*secrets*
+*.pem
+*.key
+*.p12
+*.pfx
+kaggle.json
+
+# --- Datasets & Medical Images (STRICT EXCLUSION) ---
+blood-cancer-image-dataset/
+new_dataset/
+PHASE_13_MULTI_DOMAIN_DATA/
+PHASE_13_COMBINED_MULTI_DOMAIN_DATA/
+dataset/
+datasets/
+data/
+train/
+training/
+validation/
+val/
+test/
+images/
+raw/
+processed/
+preprocessed/
+sample_images/
+
+# Image file extensions (no raw images or dataset images)
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.tif
+*.tiff
+*.webp
+*.svg
+
+# Tabular dataset manifests & raw logs
+*.csv
+*.xlsx
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.jsonl
+
+# --- Training Phases & Experimental Dirs ---
+PHASE_1_DATA_INTEGRITY/
+PHASE_2_ERROR_DRIVEN_AUGMENTATION/
+PHASE_3_HIGHER_RESOLUTION/
+PHASE_4_HARD_EXAMPLE_LEARNING/
+PHASE_5_TTA_INFERENCE_ROBUSTNESS/
+PHASE_6_RESIDUAL_ERROR_FORENSICS/
+PHASE_7_VIT_LAYERWISE_OPTIMIZATION/
+PHASE_8_VIT_RESIDUAL_FORENSICS/
+PHASE_9_EXTERNAL_DOMAIN_DIAGNOSTIC/
+PHASE_9_ROBUSTNESS_VALIDATION/
+PHASE_10_EXTERNAL_WEB_EVALUATION/
+PHASE_11_CROSS_DOMAIN_ROBUSTNESS/
+PHASE_12_EXTERNAL_ERROR_FORENSICS/
+PHASE_13A_RARE_CLASS_DOMAIN_AUDIT/
+PHASE_13B_RARE_CLASS_MULTI_DOMAIN_ACQUISITION/
+PHASE_14_DOMAIN_GENERALIZATION/
+PHASE_15_TARGETED_RARE_CLASS_DATA_ACCESS/
+FINAL_MODEL_VALIDATION/
+external_web_test/
+experiments/
+output/
+scratch/
+validation_report/
+_organization/
+_archive/
+
+# Root-level training/audit scripts
+vit_ddp_worker.py
+kaggle_ddp.py
+build_master_exclusion_fingerprints.py
+download_all_candidates.py
+execute_phase13b.py
+fix-manifest.py
+generate_phase13_reports.py
+generate_validation_artifacts.py
+independent_val_test_audit.py
+phase13_downloader.py
+phase13_ingest.py
+phase13_processor.py
+phase13_validator_dedup.py
+phase14_base.py
+progress.md
+run_batch_ingest.py
+run_phase13a_audit.py
+run_phase14_study.py
+run_phase15_access_audit.py
+validation_report.md
+validation_summary.json
+
+# --- Models & Checkpoints ---
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+*.onnx
+*.pkl
+*.joblib
+*.keras
+
+# Explicit Exception: Allow the designated deployment model
+!model/best_checkpoint.pt
+
+# --- Temporary & Log Files ---
+*.log
+*.tmp
+*.temp
+wandb/
+mlruns/
+lightning_logs/
+runs/

@@ -1,0 +1,2 @@
+# Track the official ViT-B/16 inference checkpoint using Git LFS
+model/best_checkpoint.pt filter=lfs diff=lfs merge=lfs -text
